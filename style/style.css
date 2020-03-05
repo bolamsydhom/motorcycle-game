@@ -1,0 +1,352 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.game {}
+
+.gas {
+    /* margin-top: 1rem; */
+    /* margin-left: 1rem; */
+    /* display: flex;
+    flex-direction: row; */
+}
+
+.gas-container {
+
+    border: 2px solid #fa3b13;
+    border-radius: 12px;
+    height: 26px;
+    width: 50%;
+    margin-top: 11px;
+    /* display: inline-block; */
+    top: 4px;
+    left: 3.5rem;
+    /* margin-left: 3%; */
+    position: absolute;
+
+}
+
+.gas-container__value {
+
+    position: relative;
+    background-color: #605858;
+    height: 100%;
+    border-radius: 9px;
+}
+
+.score,
+.player-name {
+    font-family: 'Just Another Hand', cursive;
+    color: #fa3b13;
+    font-size: 2rem;
+}
+
+.score {
+    margin-left: 3rem;
+}
+
+.score__coin {
+    width: 5%;
+}
+
+.mute {
+    height: 100%;
+    color: #fa3b13;
+    cursor: pointer;
+}
+
+.mute:hover {
+    color: #605858;
+    text-shadow: 2px 2px 5px #1b1a1a4b;
+    transition: all 0.25s ease-in-out;
+}
+
+/* .acc{
+    z-index: 5;
+    position: absolute;
+} */
+
+
+
+
+
+/*animation of starting page*/
+@-webkit-keyframes delay {
+
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.05);
+        -webkit-transform: scaleY(0.05);
+    }
+
+    20% {
+        transform: scaleY(1);
+        -webkit-transform: scaleY(1);
+    }
+}
+
+@keyframes delay {
+
+    0%,
+    40%,
+    100% {
+        transform: scaleY(0.05);
+        -webkit-transform: scaleY(0.05);
+    }
+
+    20% {
+        transform: scaleY(1);
+        -webkit-transform: scaleY(1);
+    }
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif;
+    color: #4089a6;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    /*&.is-changing{
+    &:before,
+    &:after{
+      transform: translateY(0);
+    }
+  }*/
+}
+
+body:before,
+body:after {
+    content: '';
+    height: 50vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    background: #1c2020;
+    z-index: 1;
+}
+
+body:before {
+    top: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+body:after {
+    bottom: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
+h1 {
+    color: #1c2020;
+    margin-bottom: 1em;
+    font-size: 2.2rem;
+    font-weight: 100;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1.4em 1.6em;
+    margin-bottom: 2em;
+    border-radius: 50em;
+    background-color: #343b3b;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #404949;
+}
+
+.loader {
+    margin: 0 auto;
+    width: 60px;
+    height: 50px;
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    z-index: 500;
+    opacity: 0;
+}
+
+.loader>div {
+    height: 100%;
+    width: 8px;
+    display: inline-block;
+    float: left;
+    margin-left: 2px;
+    -webkit-animation: delay 0.8s infinite ease-in-out;
+    animation: delay 0.8s infinite ease-in-out;
+}
+
+.loader .bar1 {
+    background-color: #754fa0;
+}
+
+.loader .bar2 {
+    background-color: #09b7bf;
+    -webkit-animation-delay: -0.7s;
+    animation-delay: -0.7s;
+}
+
+.loader .bar3 {
+    background-color: #90d36b;
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+.loader .bar4 {
+    background-color: #f2d40d;
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+
+.loader .bar5 {
+    background-color: #fcb12b;
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+}
+
+.loader .bar6 {
+    background-color: #ed1b72;
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+}
+
+
+/*end of animation*/
+
+
+/*background*/
+#wrapper-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+}
+
+
+
+
+body {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    padding: 0 90px;
+    text-align: left;
+    /* pointer-events: none; */
+}
+
+.title {
+    font-family: "Catamaran", sans-serif;
+    pointer-events: none;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 1;
+    margin-top: 14px;
+    color: #212121;
+    display: block;
+    pointer-events: none;
+}
+
+.title span {
+    color: #EC456C;
+}
+
+.subtitle {
+    font-family: "Catamaran", sans-serif;
+    pointer-events: none;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1;
+    margin-top: 0;
+    color: #212121;
+    display: block;
+    pointer-events: none;
+}
+
+.subtitle span {
+    color: #EC456C;
+}
+
+
+
+/*background end*/
+
+/*text box*/
+button {
+
+
+    align-self: center;
+    background: transparent;
+    padding: 1rem 1rem;
+    margin: 0 1rem;
+    transition: all .5s ease;
+    color: #41403E;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    outline: none;
+    box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+button.lined.thick,
+body section button.lined.thick {
+    border: solid 7px #41403E;
+}
+
+input {
+    font-family: 'Just Another Hand', cursive;
+    width:530px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+#welcome-page{
+    padding: 0px;
+}
+.hide {
+    display: none;
+}
+.muted{
+    color:#605858;
+}
+#nameHelp{
+    font-size: 1rem;
+}
+
+.gameover{
+    background-color: black;
+    margin: auto;
+    align-items: center;
+    height: 100vh;
+    z-index: 1000;
+}
+.over{
+    padding-top: 300px;
+    padding-left: 550px;
+
+}
