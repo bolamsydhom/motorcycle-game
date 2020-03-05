@@ -1,4 +1,4 @@
-# Project Title
+# MotorCycle Game
 simple MotorCycle-Game
 it was meant to try the new features in es6 and use canvas and other third party libraries 
 
